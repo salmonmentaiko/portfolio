@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  src: url('/fonts/alte-haas-grotesk.bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.contact {
+  background-image: url('/images/ofm 2025-12-29 133753.053.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  position: relative;
+  font-family: 'Alte Haas Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.contact h2 {
+  color: white;
+  position: relative;
+  z-index: 2;
+  font-family: 'Alte Haas Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: bold;
+}
+
+.contact-content {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-text {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-method {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-method:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.contact-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  opacity: 0.8;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .contact-text {
+    font-size: 1rem;
+  }
+
+  .contact-value {
+    font-size: 1rem;
+  }
+}
