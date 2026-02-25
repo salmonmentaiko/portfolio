@@ -52,6 +52,7 @@
 .project-links {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .project-link {
@@ -63,6 +64,8 @@
   transition: all 0.3s;
   font-size: 0.9rem;
   font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .project-link:hover {

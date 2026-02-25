@@ -11,18 +11,19 @@ const Projects = () => {
       demo: "https://youtu.be/RSYeboi0s3U"
     },
     {
-      title: "Project Two",
-      description: "Description of your second project. Highlight the key features and your role in the development.",
-      technologies: ["Python", "Flask", "PostgreSQL"],
-      github: "https://github.com/yourusername/project2",
+      title: "Cat and Dog Classifier",
+      description: "Classify Cats and Dogs using a CNN model built with TensorFlow and deployed as an Android Application. Demo included in slides.",
+      technologies: ["Python", "Tensorflow", "Android Studio"],
+      slides: "https://www.canva.com/design/DAF8kwMhlHo/No_7dZVpI-AJqKonZKAWEw/edit?utm_content=DAF8kwMhlHo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       demo: null
     },
     {
-      title: "Project Three",
-      description: "Another amazing project you've built. Mention any challenges you overcame or interesting implementations.",
-      technologies: ["JavaScript", "Express", "MySQL"],
-      github: "https://github.com/yourusername/project3",
-      demo: "https://project3-demo.com"
+      title: "Stock buy/sell program using C++",
+      description: "This program allows users to trade stocks and simulate their trade using stock data from a CSV. The trade prediction is simulated using linear regression. ",
+      technologies: ["C++", "CSV"],
+      slides: "https://docs.google.com/document/d/1l_dKtP8-1vT-lmEJmtmOM8-D9zvXkxs0NJXsVnq4FJE/edit?usp=sharing",
+      github: "https://github.com/salmonmentaiko/stock-sim-cpp",
+      demo: "https://youtu.be/_F39l7vyKTw"
     }
   ]
 
@@ -40,9 +41,16 @@ const Projects = () => {
               ))}
             </div>
             <div className="project-links">
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
-                GitHub
-              </a>
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
+                  GitHub
+                </a>
+              )}
+              {project.slides && (
+                <a href={project.slides} target="_blank" rel="noopener noreferrer" className="project-link">
+                  Slides/Docu
+                </a>
+              )}
               {project.demo && (
                 <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link">
                   Live Demo
